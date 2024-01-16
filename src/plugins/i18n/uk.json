@@ -1,0 +1,36 @@
+{
+  "translation": {
+    "Welcome to React": "Вітаємо в Україні"
+  },
+  "home": {
+    "trainPrograms": "Програми тренувань",
+    "exerciseGroups": "Вправи",
+    "createProgram": "Створити програму",
+    "contact": "Пропозиції та співпраця"
+  },
+  "workoutPrograms": {
+    "trainPrograms": "Програми тренувань"
+  },
+  "modal" : {
+    "text": "Видалити програму?",
+    "btnDelete": "Так",
+    "btnCancel": "Назад"
+  },
+  "createProgram": {
+    "createNewProgram": "Створення програми",
+    "programTitle": "Назва програми",
+    "programDescription": "Опис програми",
+    "addDay": "Додати день",
+    "removeDay": "Видалити день",
+    "day": "День",
+    "add": "Add",
+    "approach": "Підхід",
+    "repetitions": "Повторення",
+    "group": "Група",
+    "exercise": "Вправа",
+    "createProgram": "Створити програму"
+  },
+  "exerciseDetail" : {
+    "technic" : "Техніка"
+  }
+}

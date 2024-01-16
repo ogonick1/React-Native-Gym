@@ -1,0 +1,36 @@
+{
+  "translation": {
+    "Welcome to React": "Welcome to React and react-i18next"
+  },
+  "home": {
+    "trainPrograms": "Train Programs",
+    "exerciseGroups": "Exercise Groups",
+    "createProgram": "Create Program",
+    "contact": "contact"
+  },
+  "workoutPrograms": {
+    "trainPrograms": "Train Programs"
+  },
+  "modal" : {
+    "text": "Delete this program?",
+    "btnDelete": "Delete",
+    "btnCancel": "Cancel"
+  },
+  "createProgram": {
+    "createNewProgram": "Create new program",
+    "programTitle": "Program title",
+    "programDescription": "Program description",
+    "addDay": "Add day",
+    "removeDay": "Remove day",
+    "day": "Day",
+    "add": "Add",
+    "approach": "Approach",
+    "repetitions": " Repetitions",
+    "group": "Group",
+    "exercise": "Exercise",
+    "createProgram": "Create program"
+  },
+  "exerciseDetail" : {
+    "technic" : "Technic"
+  }
+}
