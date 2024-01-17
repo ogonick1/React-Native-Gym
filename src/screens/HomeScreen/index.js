@@ -8,11 +8,11 @@ import {
   View,
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-import BackgroundGradient from '../../assets/backgroundGradient';
+import BackgroundGradient from '../../Components/backgroundGradient';
 import {useTranslation} from 'react-i18next';
 import SelectDropdown from 'react-native-select-dropdown';
 import {useDispatch} from 'react-redux';
-import {setLanguage} from './languageSlice';
+import {setLanguage} from '../../app/Slices/languageSlice';
 
 const HomeScreen = () => {
   const dispatch = useDispatch();

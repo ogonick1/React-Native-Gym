@@ -39,6 +39,7 @@ export default videos = {
   35: require('./chest/35.mp4'),
   36: require('./chest/36.mp4'),
   37: require('./chest/37.mp4'),
+  370: require('./chest/370.mp4'),
   38: require('./back/38.mp4'),
   39: require('./back/39.mp4'),
   40: require('./back/40.mp4'),

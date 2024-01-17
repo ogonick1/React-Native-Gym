@@ -2092,13 +2092,9 @@ export const programSlice = createSlice({
   name: 'program',
   initialState,
   reducers: {
-    addProgramUk: (state, action) => {
+    addProgram: (state, action) => {
       state.uk.push(action.payload);
-      console.log(action.payload);
-    },
-    addProgramEn: (state, action) => {
       state.en.push(action.payload);
-      console.log(action.payload);
     },
     programDelete: (state, action) => {
       state.uk = state.uk.filter(obj => obj.id !== action.payload);
@@ -2107,7 +2103,7 @@ export const programSlice = createSlice({
   },
 });
 
-export const { addProgramUk, addProgramEn, programDelete } = programSlice.actions;
+export const { addProgram, programDelete } = programSlice.actions;
 
 export default programSlice.reducer;
 

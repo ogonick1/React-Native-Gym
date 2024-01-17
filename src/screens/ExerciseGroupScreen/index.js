@@ -3,12 +3,12 @@ import {View, Text, FlatList, TouchableOpacity, StyleSheet} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 import {useSelector} from 'react-redux';
-import BackgroundGradient from '../../assets/backgroundGradient';
+import BackgroundGradient from '../../Components/backgroundGradient';
 
 const ExerciseGroupsScreen = () => {
   const language = useSelector(state => state.language.lng);
-  const data = useSelector(state =>
-    language === 'uk' ? state.exerciseGroup.uk : state.exerciseGroup.en,
+  const data = useSelector(
+    state => state.exerciseGroup[language] || state.exerciseGroup.uk,
   );
 
   const navigation = useNavigation();
@@ -44,6 +44,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingHorizontal: 10,
     marginTop: 50,
+    backgroundColor: '#rgba(112,128,144, 0.5)',
   },
   button: {
     alignItems: 'center',

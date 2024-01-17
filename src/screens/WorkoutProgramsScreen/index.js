@@ -9,10 +9,10 @@ import {
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {useDispatch, useSelector} from 'react-redux';
-import {programDelete} from '../../programSlice/programSlice';
+import {programDelete} from '../../app/Slices/programSlice';
 import {useTranslation} from 'react-i18next';
 import ModalWindow from '../../Components/Modal/Modal';
-import BackgroundGradient from '../../assets/backgroundGradient';
+import BackgroundGradient from '../../Components/backgroundGradient';
 
 const CustomWorkoutProgramsScreen = () => {
   // eslint-disable-next-line no-unused-vars
@@ -20,8 +20,8 @@ const CustomWorkoutProgramsScreen = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const [modalId, setModalId] = useState('');
   const language = useSelector(state => state.language.lng);
-  const customProgram = useSelector(state =>
-    language === 'uk' ? state.program.uk : state.program.en,
+  const customProgram = useSelector(
+    state => state.program[language] || state.program.en,
   );
 
   const navigation = useNavigation();
@@ -94,7 +94,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 5,
-    marginVertical: 50,
+    paddingVertical: 20,
+    backgroundColor: '#rgba(112,128,144, 0.5)',
   },
   buttonItem: {
     alignItems: 'center',

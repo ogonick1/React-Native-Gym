@@ -9,15 +9,15 @@ import {
 } from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
 import {useSelector} from 'react-redux';
-import BackgroundGradient from '../../assets/backgroundGradient';
+import BackgroundGradient from '../../Components/backgroundGradient';
 import {useTranslation} from 'react-i18next';
 
 const ProgramExercisesScreen = () => {
   // eslint-disable-next-line no-unused-vars
   const {t, i18n} = useTranslation();
   const language = useSelector(state => state.language.lng);
-  const data = useSelector(state =>
-    language === 'uk' ? state.exercise.uk : state.exercise.en,
+  const data = useSelector(
+    state => state.exercise[language] || state.exercise.en,
   );
   const navigation = useNavigation();
   const route = useRoute();
@@ -94,11 +94,12 @@ const styles = StyleSheet.create({
   container: {
     width: '100%',
     flex: 1,
-    paddingHorizontal: 2,
+    paddingHorizontal: 5,
     fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',
     marginVertical: 5,
+    backgroundColor: '#rgba(112,128,144, 0.5)',
   },
   textTitle: {
     fontSize: 24,

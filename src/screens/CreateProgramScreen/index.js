@@ -16,15 +16,15 @@ import uuid from 'react-native-uuid';
 import {useNavigation} from '@react-navigation/native';
 import {useDispatch, useSelector} from 'react-redux';
 import Dropdown2 from './Dropdown2';
-import BackgroundGradient from '../../assets/backgroundGradient';
+import BackgroundGradient from '../../Components/backgroundGradient';
 import {useTranslation} from 'react-i18next';
-import {addProgramEn, addProgramUk} from '../../programSlice/programSlice';
+import {addProgram} from '../../app/Slices/programSlice';
 
 const CreateProgramScreen = () => {
   const language = useSelector(state => state.language.lng);
   const {t, i18n} = useTranslation();
-  const data = useSelector(state =>
-    language === 'uk' ? state.exercise.uk : state.exercise.en,
+  const data = useSelector(
+    state => state.exercise[language] || state.exercise.uk,
   );
   const exerciseGroup = useSelector(state =>
     language === 'uk' ? state.exerciseGroup.uk : state.exerciseGroup.en,
@@ -38,8 +38,8 @@ const CreateProgramScreen = () => {
   const [programDays, setProgramDays] = useState([]);
 
   const handleAddDay = () => {
-    setProgramDays([
-      ...programDays,
+    setProgramDays(prev => [
+      ...prev,
       {day: programDays.length + 1, exercises: []},
     ]);
   };
@@ -84,7 +84,7 @@ const CreateProgramScreen = () => {
       days: programDays,
     };
 
-    dispatch(language === 'uk' ? addProgramUk(program) : addProgramEn(program));
+    dispatch(addProgram(program));
 
     navigation.navigate('Home');
   };

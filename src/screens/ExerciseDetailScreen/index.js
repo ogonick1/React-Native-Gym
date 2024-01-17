@@ -1,6 +1,6 @@
 import React from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
-import BackgroundGradient from '../../assets/backgroundGradient';
+import BackgroundGradient from '../../Components/backgroundGradient';
 import Video from 'react-native-video';
 import videos from './../../video/index';
 import {useTranslation} from 'react-i18next';
@@ -48,8 +48,8 @@ const ExerciseDetailScreen = ({route}) => {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 10,
-    marginTop: 10,
+    backgroundColor: '#rgba(112,128,144, 0.5)',
+    paddingHorizontal: 8,
   },
   title: {
     fontSize: 24,
@@ -92,10 +92,10 @@ const styles = StyleSheet.create({
     borderColor: 'green',
     backgroundColor: 'beige',
     marginBottom: 10,
+    borderRadius: 5,
   },
   textWarn: {
     paddingHorizontal: 5,
-    marginTop: 10,
     fontSize: 18,
     color: 'black',
     marginBottom: 5,
@@ -106,6 +106,7 @@ const styles = StyleSheet.create({
     borderColor: 'red',
     backgroundColor: 'beige',
     marginBottom: 15,
+    borderRadius: 5,
   },
 });
 

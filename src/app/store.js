@@ -2,10 +2,10 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import programSlice from '../programSlice/programSlice.js';
-import exerciseSlice from '../exerciseSlice/exerciseSlice.js';
-import exerciseGroupSlice from '../screens/ExerciseGroupScreen/exerciseGroupSlice.js';
-import  languageSlice  from '../screens/HomeScreen/languageSlice.js';
+import programSlice from './Slices/programSlice.js';
+import exerciseSlice from './Slices/exerciseSlice.js';
+import exerciseGroupSlice from './Slices/exerciseGroupSlice.js';
+import  languageSlice  from './Slices/languageSlice.js';
 
 const persistConfig = {
   key: 'root',

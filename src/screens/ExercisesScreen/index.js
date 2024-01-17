@@ -2,12 +2,12 @@ import React from 'react';
 import {View, Text, FlatList, TouchableOpacity, StyleSheet} from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
 import {useSelector} from 'react-redux';
-import BackgroundGradient from '../../assets/backgroundGradient';
+import BackgroundGradient from '../../Components/backgroundGradient';
 
 const ExercisesScreen = () => {
   const language = useSelector(state => state.language.lng);
-  const data = useSelector(state =>
-    language === 'uk' ? state.exercise.uk : state.exercise.en,
+  const data = useSelector(
+    state => state.exercise[language] || state.exercise.en,
   );
 
   const navigation = useNavigation();

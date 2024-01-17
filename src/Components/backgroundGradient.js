@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    marginHorizontal: 5,
+    marginHorizontal: 1,
   },
 });
 

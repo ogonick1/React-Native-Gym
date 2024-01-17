@@ -31,32 +31,32 @@ function App(): JSX.Element {
               component={HomeScreen}
             />
             <Stack.Screen
-              options={{headerShown: false}}
+              options={{title: ''}}
               name="CreateProgram"
               component={CreateProgramScreen}
             />
             <Stack.Screen
-              options={{headerShown: false}}
+              options={{title: ''}}
               name="ExerciseGroups"
               component={ExerciseGroupsScreen}
             />
             <Stack.Screen
               name="Exercises"
               component={ExercisesScreen}
-              options={{headerShown: false}}
+              options={{title: ''}}
             />
             <Stack.Screen
               name="WorkoutPrograms"
               component={WorkoutProgramsScreen}
-              options={{headerShown: false}}
+              options={{title: ''}}
             />
             <Stack.Screen
-              options={{headerShown: false}}
+              options={{title: ''}}
               name="ProgramExercises"
               component={ProgramExercisesScreen}
             />
             <Stack.Screen
-              options={{headerShown: false}}
+              options={{title: ''}}
               name="ExerciseDetail"
               component={ExerciseDetailScreen}
             />
